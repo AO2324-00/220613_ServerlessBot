@@ -2,15 +2,15 @@ import { ApplicationCommandInteraction, InteractionResponse } from "../../@types
 import { InteractionCallbackType } from "../../@types/types.ts"
 import { ping } from "./ping.ts"
 
+const commands = { ping };
+
 export function onApplicationCommand(interaction:ApplicationCommandInteraction):InteractionResponse {
   const data = interaction.data
   // 実行されたコマンド名
   // コマンドが増えた場合はこれで分岐すれば良い
   const commandName = data.name;
 
-  const res = {ping}
-
-  const command = res[commandName] || function(){
+  const res = commands[commandName] || function(){
     return {
       type:InteractionCallbackType.CHANNEL_MESSAGE_WITH_SOURCE,
       data: {
@@ -19,5 +19,5 @@ export function onApplicationCommand(interaction:ApplicationCommandInteraction):
     }
   }
   
-  return command(interaction);
+  return res(interaction);
 }
