@@ -12,33 +12,34 @@ const headers = {
 
 const body:GlobalApplicationCommand = {
     name: "ping",
+    type: 1,
     description: "Response pong!",
-    "options": [
+    options: [
         {
-            "name": "animal",
-            "description": "The type of animal",
-            "type": 3,
-            "required": true,
-            "choices": [
+            name: "animal",
+            description: "The type of animal",
+            type: 3,
+            required: true,
+            choices: [
                 {
-                    "name": "Dog",
-                    "value": "animal_dog"
+                    name: "Dog",
+                    value: "animal_dog"
                 },
                 {
-                    "name": "Cat",
-                    "value": "animal_cat"
+                    name: "Cat",
+                    value: "animal_cat"
                 },
                 {
-                    "name": "Penguin",
-                    "value": "animal_penguin"
+                    name: "Penguin",
+                    value: "animal_penguin"
                 }
             ]
         },
         {
-            "name": "only_smol",
-            "description": "Whether to show only baby animals",
-            "type": 5,
-            "required": false
+            name: "only_smol",
+            description: "Whether to show only baby animals",
+            type: 5,
+            required: false
         }
     ]
 }
