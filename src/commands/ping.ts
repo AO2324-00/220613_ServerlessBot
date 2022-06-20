@@ -1,11 +1,11 @@
-import { ApplicationCommandInteraction, InteractionResponse } from "../../@types/index.d.ts"
+import { ApplicationCommandInteraction, MessageComponentInteraction, InteractionResponse } from "../../@types/index.d.ts"
 import { InteractionCallbackType } from "../../@types/types.ts"
 
-export function ping(interaction:ApplicationCommandInteraction):InteractionResponse {
+export function ping(interaction:MessageComponentInteraction):InteractionResponse {
   // コマンドの情報を取得
-  const data = interaction.data
+  //const data = interaction.data
   // コマンドの送信者の情報を取得
-  const member = interaction.member
+  //const member = interaction.member
 
   // レスポンス本体
   const res: InteractionResponse = {
