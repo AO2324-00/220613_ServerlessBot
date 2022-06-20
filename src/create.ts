@@ -17,6 +17,10 @@ const body:GlobalApplicationCommand = {
 
 try {
     await KY.post(url, {headers:headers, json: body }).json()
+    await KY.post(url, {headers:headers, json: {
+        name: "test",
+        description: "TEST!",
+    } }).json()
 } catch (e) {
     console.log("error");
     console.error(e)
