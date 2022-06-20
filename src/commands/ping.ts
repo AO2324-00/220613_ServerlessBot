@@ -13,7 +13,7 @@ export function ping(interaction:any):InteractionResponse {
       // input at the top.
       type: InteractionCallbackType.CHANNEL_MESSAGE_WITH_SOURCE,
       data: {
-        content: `pong!\n${JSON.stringify(interaction)}`,
+        content: `pong!`,
       }
     }
   return res;
