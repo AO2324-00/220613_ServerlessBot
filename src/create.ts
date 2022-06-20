@@ -5,6 +5,7 @@ const BOT_TOKEN = ENV.require("BOT_TOKEN")
 const Application_ID = ENV.require("Application_ID")
 
 const url = `https://discord.com/api/v10/applications/${Application_ID}/commands`;
+console.log(url);
 
 const headers = {
     Authorization: `Bot ${BOT_TOKEN}`

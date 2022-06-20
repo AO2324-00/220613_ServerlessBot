@@ -2,7 +2,7 @@ import { ApplicationCommandInteraction, InteractionResponse } from "../../@types
 import { InteractionCallbackType } from "../../@types/types.ts"
 import { ping } from "./ping.ts"
 
-const commands = { ping };
+const commands = { "test":ping };
 
 export function onApplicationCommand(interaction:ApplicationCommandInteraction):InteractionResponse {
   const data = interaction.data
