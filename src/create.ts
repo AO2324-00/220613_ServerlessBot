@@ -13,18 +13,6 @@ const headers = {
 const body:GlobalApplicationCommand = {
     name: "test",
     description: "Response pong!",
-    options: [
-        {
-            name: "user",
-            description: "Get or edit permissions for a user",
-            type: 2 // 2 is type SUB_COMMAND_GROUP
-        },
-        {
-            name: "role",
-            description: "Get or edit permissions for a role",
-            type: 2
-        }
-    ]
 }
 
 try {
