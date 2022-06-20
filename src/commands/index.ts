@@ -10,16 +10,8 @@ export function onApplicationCommand(interaction:ApplicationCommandInteraction){
   let res:InteractionResponse;
   
   switch(commandName){
-    case "ping":
-      res = ping(interaction);
-      break;
     case "test":
-      res = {
-        type:InteractionCallbackType.CHANNEL_MESSAGE_WITH_SOURCE,
-        data: {
-          content:"TEST!!"
-        }
-      }
+      res = ping(interaction);
       break;
       
     default:
