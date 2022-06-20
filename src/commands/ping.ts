@@ -1,7 +1,7 @@
 import { ApplicationCommandInteraction, MessageComponentInteraction, InteractionResponse } from "../../@types/index.d.ts"
 import { InteractionCallbackType } from "../../@types/types.ts"
 
-export function ping(interaction:MessageComponentInteraction):InteractionResponse {
+export function ping(interaction:any):InteractionResponse {
   // コマンドの情報を取得
   //const data = interaction.data
   // コマンドの送信者の情報を取得
@@ -13,7 +13,7 @@ export function ping(interaction:MessageComponentInteraction):InteractionRespons
       // input at the top.
       type: InteractionCallbackType.CHANNEL_MESSAGE_WITH_SOURCE,
       data: {
-        content: `pong!\n${JSON.stringify(interaction.message)}`,
+        content: `pong!\n${JSON.stringify(interaction)}`,
       }
     }
   return res;
