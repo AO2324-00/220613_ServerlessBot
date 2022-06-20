@@ -13,14 +13,38 @@ const headers = {
 const body:GlobalApplicationCommand = {
     name: "ping",
     description: "Response pong!",
+    "options": [
+        {
+            "name": "animal",
+            "description": "The type of animal",
+            "type": 3,
+            "required": true,
+            "choices": [
+                {
+                    "name": "Dog",
+                    "value": "animal_dog"
+                },
+                {
+                    "name": "Cat",
+                    "value": "animal_cat"
+                },
+                {
+                    "name": "Penguin",
+                    "value": "animal_penguin"
+                }
+            ]
+        },
+        {
+            "name": "only_smol",
+            "description": "Whether to show only baby animals",
+            "type": 5,
+            "required": false
+        }
+    ]
 }
 
 try {
     await KY.post(url, {headers:headers, json: body }).json()
-    await KY.post(url, {headers:headers, json: {
-        name: "test",
-        description: "TEST!",
-    } }).json()
 } catch (e) {
     console.log("error");
     console.error(e)
