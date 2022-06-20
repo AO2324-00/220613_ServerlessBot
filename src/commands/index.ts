@@ -13,6 +13,14 @@ export function onApplicationCommand(interaction:ApplicationCommandInteraction){
     case "ping":
       res = ping(interaction);
       break;
+    case "test":
+      res = {
+        type:InteractionCallbackType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data: {
+          content:"TEST!!"
+        }
+      }
+      break;
       
     default:
       res = {
